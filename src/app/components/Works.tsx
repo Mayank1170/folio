@@ -20,7 +20,18 @@ const Works = () => {
       ],
     },
     {
-      id: 2,
+        id: 2,
+        title: "E-commerce Platform",
+        description:
+          "Full-stack e-commerce solution with payment integration and admin dashboard.",
+        images: [
+          { src: work1, width: 250, height: 180 },
+          { src: work1, width: 180, height: 130 },
+          { src: work1, width: 200, height: 150 },
+        ],
+      },
+    {
+      id: 3,
       title: "Portfolio Website",
       description:
         "A modern portfolio website built with Next.js, featuring smooth animations and responsive design.",
@@ -28,17 +39,7 @@ const Works = () => {
         { src: work1, width: 350, height: 230 },
       ],
     },
-    {
-      id: 3,
-      title: "E-commerce Platform",
-      description:
-        "Full-stack e-commerce solution with payment integration and admin dashboard.",
-      images: [
-        { src: work1, width: 250, height: 180 },
-        { src: work1, width: 200, height: 150 },
-        { src: work1, width: 180, height: 130 },
-      ],
-    },
+   
     {
       id: 4,
       title: "Mobile App UI",
