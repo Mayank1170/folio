@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import Works from "@/app/components/Works";
 
 const Page = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -8,10 +9,11 @@ const Page = () => {
 
   useEffect(() => {
     const works = worksRef.current;
-
     if (!works) return;
 
     const worksLetters = works.querySelectorAll("span");
+    
+    // Initial state
     gsap.set(worksLetters, {
       y: "100%",
       opacity: 1,
@@ -23,11 +25,12 @@ const Page = () => {
     });
 
     const tl = gsap.timeline({ delay: 0.5 });
-
+    
+    // letters in Mayank
     tl.to(
-      [worksLetters[1], worksLetters[3]],
+      [worksLetters[1], worksLetters[3]], // "y" and "W"
       {
-        y: "-10%",
+        y: "0%", 
         duration: 0.8,
         ease: "power3.out",
         stagger: 0.05,
@@ -35,9 +38,9 @@ const Page = () => {
       "reveal"
     )
     .to(
-      [worksLetters[0], worksLetters[4]],
+      [worksLetters[0], worksLetters[4]], // "M" and "o"
       {
-        y: "-10%",
+        y: "0%",
         duration: 0.8,
         ease: "power3.out",
         stagger: 0.05,
@@ -45,9 +48,9 @@ const Page = () => {
       "reveal+=0.15"
     )
     .to(
-      [worksLetters[5], worksLetters[6]],
+      [worksLetters[5], worksLetters[6]], // "r" and "k"
       {
-        y: "-10%",
+        y: "0%",
         duration: 0.8,
         ease: "power3.out",
         stagger: 0.05,
@@ -55,9 +58,9 @@ const Page = () => {
       "reveal+=0.3"
     )
     .to(
-      worksLetters[7],
+      worksLetters[7], // "s"
       {
-        y: "-10%",
+        y: "0%",
         duration: 0.8,
         ease: "power3.out",
       },
@@ -80,7 +83,7 @@ const Page = () => {
           top: "20%",
           left: "50%",
           transform: "translate(-50%, 0%)",
-          height: "100px", 
+          height: "100px",
           zIndex: 10,
         }}
       >
@@ -100,6 +103,10 @@ const Page = () => {
           <span className="inline-block">k</span>
           <span className="inline-block">s</span>
         </div>
+      </div>
+
+      <div className="absolute w-full bottom-10 z-[1000]">
+        <Works />
       </div>
     </div>
   );

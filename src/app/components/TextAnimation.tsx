@@ -17,7 +17,6 @@ export default function TextAnimation() {
     const mayank = mayankRef.current;
     const lowerText = lowerTextRef.current;
 
-    // Get header and navbar from the layout
     const navbar = document.querySelector('[data-navbar]') as HTMLElement;
     const header = document.querySelector('[data-header]') as HTMLElement;
 
